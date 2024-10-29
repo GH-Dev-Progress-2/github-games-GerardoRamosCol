@@ -32,6 +32,9 @@
       <p><canvas id="upcoming"></canvas></p>
       <p>score <span id="score">00000</span></p>
       <p>rows <span id="rows">0</span></p>
+      <p>name <span id="playerName"></span></p>
+      <p><input type="text" id="nameInput" placeholder="Enter your name"></p>
+      <p><button onclick="setName()">Set Name</button></p>
     </div>
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
@@ -451,6 +454,15 @@
     //-------------------------------------------------------------------------
 
     run();
+
+    //-------------------------------------------------------------------------
+    // Handle player name input and display
+    //-------------------------------------------------------------------------
+
+    function setName() {
+      var name = get('nameInput').value;
+      html('playerName', name);
+    }
 
   </script>
 
